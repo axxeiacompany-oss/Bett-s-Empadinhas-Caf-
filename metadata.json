@@ -1,0 +1,6 @@
+{
+  "name": "Bett's Empadinhas & Café - Catálogo Digital",
+  "description": "Catálogo digital interactivo de Bett's Empadinhas & Café. Empadas artesanales, cafés especiales, panificados, delicias dulces y jugos naturales con pedidos vía WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
