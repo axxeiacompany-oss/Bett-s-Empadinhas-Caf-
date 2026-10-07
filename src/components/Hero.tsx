@@ -25,7 +25,6 @@ export const Hero: React.FC<HeroProps> = ({
           src={HERO_IMAGE}
           alt={storeConfig.storeName}
           className="w-full h-full object-cover object-center opacity-40 transform scale-102 transition-transform duration-1000"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#120c09]/95 via-[#120c09]/85 to-[#120c09]/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#140e0b] via-transparent to-black/40" />

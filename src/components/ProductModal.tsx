@@ -103,7 +103,6 @@ export const ProductModal: React.FC<ProductModalProps> = ({
             src={item.image || CATEGORY_DEFAULT_IMAGES[item.categoryId] || SHOWCASE_EMPADAS}
             alt={item.name[language]}
             className="w-full h-full object-cover object-center"
-            referrerPolicy="no-referrer"
             onError={(e) => {
               const target = e.currentTarget;
               if (target.src !== SHOWCASE_EMPADAS) {
