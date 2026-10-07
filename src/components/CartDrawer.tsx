@@ -171,6 +171,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                             alt={item.name}
                             className="w-13 h-13 rounded-xl object-cover shrink-0 border border-[#ede5db] bg-[#f7f3ee]"
                             loading="lazy"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                            }}
                           />
                         )}
                         <div className="flex-1 min-w-0">

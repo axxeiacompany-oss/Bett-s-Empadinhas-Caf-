@@ -1,52 +1,98 @@
 import { Category, MenuItem, StoreConfig } from '../types';
 
-export const HERO_IMAGE = '/src/assets/images/hero_betts_catalog_1791395501305.jpg';
-export const SHOWCASE_EMPADAS = '/src/assets/images/showcase_empadas_1791395513700.jpg';
-export const SHOWCASE_PASTRIES = '/src/assets/images/showcase_pastries_dulces_1791395526835.jpg';
-export const SHOWCASE_BEVERAGES = '/src/assets/images/showcase_beverages_cafe_1791395537078.jpg';
-export const SHOWCASE_MBEJU_CHIPA = '/src/assets/images/cat_mbeju_chipa_1791396277503.jpg';
-export const SHOWCASE_PANIFICADOS = '/src/assets/images/cat_panificados_queijo_1791396288560.jpg';
-export const SHOWCASE_BOCADITOS = '/src/assets/images/cat_bocaditos_fiesta_1791396297867.jpg';
-export const SHOWCASE_ICED_COFFEE = '/src/assets/images/cat_iced_coffee_beverages_1791396306601.jpg';
+import HERO_IMAGE from '../assets/images/hero_betts_catalog_1791395501305.jpg';
+import SHOWCASE_EMPADAS from '../assets/images/showcase_empadas_1791395513700.jpg';
+import SHOWCASE_PASTRIES from '../assets/images/showcase_pastries_dulces_1791395526835.jpg';
+import SHOWCASE_BEVERAGES from '../assets/images/showcase_beverages_cafe_1791395537078.jpg';
+import SHOWCASE_MBEJU_CHIPA from '../assets/images/cat_mbeju_chipa_1791396277503.jpg';
+import SHOWCASE_PANIFICADOS from '../assets/images/cat_panificados_queijo_1791396288560.jpg';
+import SHOWCASE_BOCADITOS from '../assets/images/cat_bocaditos_fiesta_1791396297867.jpg';
+import SHOWCASE_ICED_COFFEE from '../assets/images/cat_iced_coffee_beverages_1791396306601.jpg';
 
 // Dedicated luxury product photography
-export const LUXURY_EMPADA_SINGLE = '/src/assets/images/luxury_empada_single_1791396723805.jpg';
-export const LUXURY_EMPADAO_PIE = '/src/assets/images/luxury_empadao_pie_1791396734212.jpg';
-export const LUXURY_CROISSANT = '/src/assets/images/luxury_croissant_pastry_1791396746994.jpg';
-export const LUXURY_SPECIALTY_COFFEE = '/src/assets/images/luxury_specialty_coffee_1791396756660.jpg';
-export const LUXURY_SWEETS_BROWNIE = '/src/assets/images/luxury_sweets_brownie_1791396766267.jpg';
+import LUXURY_EMPADA_SINGLE from '../assets/images/luxury_empada_single_1791396723805.jpg';
+import LUXURY_EMPADAO_PIE from '../assets/images/luxury_empadao_pie_1791396734212.jpg';
+import LUXURY_CROISSANT from '../assets/images/luxury_croissant_pastry_1791396746994.jpg';
+import LUXURY_SPECIALTY_COFFEE from '../assets/images/luxury_specialty_coffee_1791396756660.jpg';
+import LUXURY_SWEETS_BROWNIE from '../assets/images/luxury_sweets_brownie_1791396766267.jpg';
 
 // Authentic individual product photos
-export const PROD_MBEJU_TRADICIONAL = '/src/assets/images/prod_mbeju_tradicional_1791397752532.jpg';
-export const PROD_AVOCADO_TOAST = '/src/assets/images/prod_avocado_toast_1791397761942.jpg';
-export const PROD_EMPADAS_DULCES = '/src/assets/images/prod_empadas_dulces_1791397770869.jpg';
-export const PROD_CHOCOLATE_CALIENTE = '/src/assets/images/prod_chocolate_caliente_1791397780969.jpg';
-export const PROD_SODA_ITALIANA = '/src/assets/images/prod_soda_italiana_1791397793302.jpg';
-export const PROD_JUGO_MARACUJA = '/src/assets/images/prod_jugo_maracuja_1791397805046.jpg';
-export const PROD_CROISSANT_DULCE = '/src/assets/images/prod_croissant_dulce_1791397814917.jpg';
-export const PROD_PAO_DE_QUEIJO = '/src/assets/images/prod_pao_de_queijo_1791397825374.jpg';
-export const PROD_MATCHA_LATTE = '/src/assets/images/prod_matcha_latte_1791397836802.jpg';
-export const PROD_MEDIALUNAS = '/src/assets/images/prod_medialunas_1791397847360.jpg';
-export const PROD_CHIPA_PARAGUAYA = '/src/assets/images/prod_chipa_paraguaya_1791397636043.jpg';
-export const PROD_CINNAMON_ROLL = '/src/assets/images/prod_cinnamon_roll_1791397647746.jpg';
-export const PROD_ALFAJORES_MAICENA = '/src/assets/images/prod_alfajores_maicena_1791397659686.jpg';
-export const PROD_CROISSANT_SALADO = '/src/assets/images/prod_croissant_salado_1791397678465.jpg';
-export const PROD_HUEVOS_REVUELTOS = '/src/assets/images/prod_huevos_revueltos_1791397707483.jpg';
-export const PROD_EMPADA_PRESUNTO_QUEIJO = '/src/assets/images/prod_empada_presunto_queijo_1791398413032.jpg';
-export const PROD_EMPADA_CARNE = '/src/assets/images/prod_empada_carne_1791399080774.jpg';
-export const PROD_EMPADA_CARNE_DESFIADA = '/src/assets/images/prod_empada_desfiada_1791399210720.jpg';
-export const PROD_EMPADA_CARNE_SECA_ABOBORA = '/src/assets/images/prod_empada_seca_abobora_1791399313591.jpg';
-export const PROD_EMPADA_CALABRESA = '/src/assets/images/prod_empada_calabresa_1791399447508.jpg';
-export const PROD_EMPADA_FRANGO = '/src/assets/images/prod_empada_frango_1791399658699.jpg';
-export const PROD_EMPADA_PALMITO = '/src/assets/images/prod_empada_palmito_1791399671835.jpg';
-export const PROD_EMPADA_QUEIJO = '/src/assets/images/prod_empada_queijo_1791399685079.jpg';
-export const PROD_EMPADA_CAMARAO = '/src/assets/images/prod_empada_camarao_1791399697071.jpg';
-export const PROD_EMPADA_COSTELA = '/src/assets/images/prod_empada_costela_1791399715731.jpg';
-export const PROD_EMPADA_ESPINAFRE = '/src/assets/images/prod_empada_espinafre_1791399728095.jpg';
-export const PROD_PASTAFROLA = '/src/assets/images/prod_pastafrola_1791399740189.jpg';
-export const PROD_COOKIES = '/src/assets/images/prod_cookies_1791399752691.jpg';
-export const PROD_EMPADA_MANDIOCA = '/src/assets/images/prod_empada_mandioca_1791399768550.jpg';
-export const PROD_EMPADA_BACALHAU = '/src/assets/images/prod_empada_bacalhau_1791399781862.jpg';
+import PROD_MBEJU_TRADICIONAL from '../assets/images/prod_mbeju_tradicional_1791397752532.jpg';
+import PROD_AVOCADO_TOAST from '../assets/images/prod_avocado_toast_1791397761942.jpg';
+import PROD_EMPADAS_DULCES from '../assets/images/prod_empadas_dulces_1791397770869.jpg';
+import PROD_CHOCOLATE_CALIENTE from '../assets/images/prod_chocolate_caliente_1791397780969.jpg';
+import PROD_SODA_ITALIANA from '../assets/images/prod_soda_italiana_1791397793302.jpg';
+import PROD_JUGO_MARACUJA from '../assets/images/prod_jugo_maracuja_1791397805046.jpg';
+import PROD_CROISSANT_DULCE from '../assets/images/prod_croissant_dulce_1791397814917.jpg';
+import PROD_PAO_DE_QUEIJO from '../assets/images/prod_pao_de_queijo_1791397825374.jpg';
+import PROD_MATCHA_LATTE from '../assets/images/prod_matcha_latte_1791397836802.jpg';
+import PROD_MEDIALUNAS from '../assets/images/prod_medialunas_1791397847360.jpg';
+import PROD_CHIPA_PARAGUAYA from '../assets/images/prod_chipa_paraguaya_1791397636043.jpg';
+import PROD_CINNAMON_ROLL from '../assets/images/prod_cinnamon_roll_1791397647746.jpg';
+import PROD_ALFAJORES_MAICENA from '../assets/images/prod_alfajores_maicena_1791397659686.jpg';
+import PROD_CROISSANT_SALADO from '../assets/images/prod_croissant_salado_1791397678465.jpg';
+import PROD_HUEVOS_REVUELTOS from '../assets/images/prod_huevos_revueltos_1791397707483.jpg';
+import PROD_EMPADA_PRESUNTO_QUEIJO from '../assets/images/prod_empada_presunto_queijo_1791398413032.jpg';
+import PROD_EMPADA_CARNE from '../assets/images/prod_empada_carne_1791399080774.jpg';
+import PROD_EMPADA_CARNE_DESFIADA from '../assets/images/prod_empada_desfiada_1791399210720.jpg';
+import PROD_EMPADA_CARNE_SECA_ABOBORA from '../assets/images/prod_empada_seca_abobora_1791399313591.jpg';
+import PROD_EMPADA_CALABRESA from '../assets/images/prod_empada_calabresa_1791399447508.jpg';
+import PROD_EMPADA_FRANGO from '../assets/images/prod_empada_frango_1791399658699.jpg';
+import PROD_EMPADA_PALMITO from '../assets/images/prod_empada_palmito_1791399671835.jpg';
+import PROD_EMPADA_QUEIJO from '../assets/images/prod_empada_queijo_1791399685079.jpg';
+import PROD_EMPADA_CAMARAO from '../assets/images/prod_empada_camarao_1791399697071.jpg';
+import PROD_EMPADA_COSTELA from '../assets/images/prod_empada_costela_1791399715731.jpg';
+import PROD_EMPADA_ESPINAFRE from '../assets/images/prod_empada_espinafre_1791399728095.jpg';
+import PROD_PASTAFROLA from '../assets/images/prod_pastafrola_1791399740189.jpg';
+import PROD_COOKIES from '../assets/images/prod_cookies_1791399752691.jpg';
+import PROD_EMPADA_MANDIOCA from '../assets/images/prod_empada_mandioca_1791399768550.jpg';
+import PROD_EMPADA_BACALHAU from '../assets/images/prod_empada_bacalhau_1791399781862.jpg';
+
+export {
+  HERO_IMAGE,
+  SHOWCASE_EMPADAS,
+  SHOWCASE_PASTRIES,
+  SHOWCASE_BEVERAGES,
+  SHOWCASE_MBEJU_CHIPA,
+  SHOWCASE_PANIFICADOS,
+  SHOWCASE_BOCADITOS,
+  SHOWCASE_ICED_COFFEE,
+  LUXURY_EMPADA_SINGLE,
+  LUXURY_EMPADAO_PIE,
+  LUXURY_CROISSANT,
+  LUXURY_SPECIALTY_COFFEE,
+  LUXURY_SWEETS_BROWNIE,
+  PROD_MBEJU_TRADICIONAL,
+  PROD_AVOCADO_TOAST,
+  PROD_EMPADAS_DULCES,
+  PROD_CHOCOLATE_CALIENTE,
+  PROD_SODA_ITALIANA,
+  PROD_JUGO_MARACUJA,
+  PROD_CROISSANT_DULCE,
+  PROD_PAO_DE_QUEIJO,
+  PROD_MATCHA_LATTE,
+  PROD_MEDIALUNAS,
+  PROD_CHIPA_PARAGUAYA,
+  PROD_CINNAMON_ROLL,
+  PROD_ALFAJORES_MAICENA,
+  PROD_CROISSANT_SALADO,
+  PROD_HUEVOS_REVUELTOS,
+  PROD_EMPADA_PRESUNTO_QUEIJO,
+  PROD_EMPADA_CARNE,
+  PROD_EMPADA_CARNE_DESFIADA,
+  PROD_EMPADA_CARNE_SECA_ABOBORA,
+  PROD_EMPADA_CALABRESA,
+  PROD_EMPADA_FRANGO,
+  PROD_EMPADA_PALMITO,
+  PROD_EMPADA_QUEIJO,
+  PROD_EMPADA_CAMARAO,
+  PROD_EMPADA_COSTELA,
+  PROD_EMPADA_ESPINAFRE,
+  PROD_PASTAFROLA,
+  PROD_COOKIES,
+  PROD_EMPADA_MANDIOCA,
+  PROD_EMPADA_BACALHAU,
+};
 
 // Exchange rates approximate (1 BRL ≈ 1380 PYG, 1 USD ≈ 7800 PYG)
 export const EXCHANGE_RATES = {

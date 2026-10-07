@@ -39,6 +39,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
           referrerPolicy="no-referrer"
           loading="lazy"
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (target.src !== LUXURY_EMPADA_SINGLE) {
+              target.src = LUXURY_EMPADA_SINGLE;
+            }
+          }}
         />
 
         {/* Subtle Luxury Gradient Overlay */}
