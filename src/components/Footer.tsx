@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ language }) => {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  WhatsApp: +{WHATSAPP_PHONE}
+                  WhatsApp: +595 993 524 238
                 </a>
               </li>
               <li className="flex items-center gap-2">

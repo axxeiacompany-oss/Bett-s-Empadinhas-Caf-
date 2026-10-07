@@ -33,6 +33,20 @@ export const PROD_ALFAJORES_MAICENA = '/src/assets/images/prod_alfajores_maicena
 export const PROD_CROISSANT_SALADO = '/src/assets/images/prod_croissant_salado_1791397678465.jpg';
 export const PROD_HUEVOS_REVUELTOS = '/src/assets/images/prod_huevos_revueltos_1791397707483.jpg';
 export const PROD_EMPADA_PRESUNTO_QUEIJO = '/src/assets/images/prod_empada_presunto_queijo_1791398413032.jpg';
+export const PROD_EMPADA_CARNE = '/src/assets/images/prod_empada_carne_1791399080774.jpg';
+export const PROD_EMPADA_CARNE_DESFIADA = '/src/assets/images/prod_empada_desfiada_1791399210720.jpg';
+export const PROD_EMPADA_CARNE_SECA_ABOBORA = '/src/assets/images/prod_empada_seca_abobora_1791399313591.jpg';
+export const PROD_EMPADA_CALABRESA = '/src/assets/images/prod_empada_calabresa_1791399447508.jpg';
+export const PROD_EMPADA_FRANGO = '/src/assets/images/prod_empada_frango_1791399658699.jpg';
+export const PROD_EMPADA_PALMITO = '/src/assets/images/prod_empada_palmito_1791399671835.jpg';
+export const PROD_EMPADA_QUEIJO = '/src/assets/images/prod_empada_queijo_1791399685079.jpg';
+export const PROD_EMPADA_CAMARAO = '/src/assets/images/prod_empada_camarao_1791399697071.jpg';
+export const PROD_EMPADA_COSTELA = '/src/assets/images/prod_empada_costela_1791399715731.jpg';
+export const PROD_EMPADA_ESPINAFRE = '/src/assets/images/prod_empada_espinafre_1791399728095.jpg';
+export const PROD_PASTAFROLA = '/src/assets/images/prod_pastafrola_1791399740189.jpg';
+export const PROD_COOKIES = '/src/assets/images/prod_cookies_1791399752691.jpg';
+export const PROD_EMPADA_MANDIOCA = '/src/assets/images/prod_empada_mandioca_1791399768550.jpg';
+export const PROD_EMPADA_BACALHAU = '/src/assets/images/prod_empada_bacalhau_1791399781862.jpg';
 
 // Exchange rates approximate (1 BRL ≈ 1380 PYG, 1 USD ≈ 7800 PYG)
 export const EXCHANGE_RATES = {
@@ -44,7 +58,7 @@ export const EXCHANGE_RATES = {
 export const DEFAULT_STORE_CONFIG: StoreConfig = {
   storeName: "Bett's Empadinhas & Café",
   storeSlogan: 'Tu mejor momento del día',
-  whatsappPhone: '595981000000',
+  whatsappPhone: '595993524238',
   address: 'Av. Gastronómica 1234 - Salón & Delivery',
   deliveryEstimatedMinutes: '25 - 40 min',
   defaultDeliveryFeePyg: 10000,
@@ -245,35 +259,59 @@ export const MENU_ITEMS: MenuItem[] = [
     id: 'emp-clas-pollo',
     name: { es: 'Empada Clásica de Pollo', pt: 'Empada Clássica de Frango' },
     description: {
-      es: 'Pechuga de pollo sazonada con especias aromáticas, tomate y hierbas frescas.',
-      pt: 'Peito de frango desfiado suculento temperado com ervas frescas e toque especial.',
+      es: 'Masa fina dorada rellena de pechuga de pollo sazonada con especias aromáticas, tomate y hierbas frescas.',
+      pt: 'Peito de frango desfiado suculento temperado com ervas frescas e toque especial em massa podre douradinha.',
     },
     price: 8000,
     categoryId: 'empadas',
     subCategory: 'Clásicas al Horno',
+    image: PROD_EMPADA_FRANGO,
   },
   {
     id: 'emp-clas-carne',
     name: { es: 'Empada Clásica de Carne', pt: 'Empada Clássica de Carne' },
     description: {
-      es: 'Carne vacuna jugosa condimentada a fuego lento con cebollita y huevo picado.',
-      pt: 'Carne bovina moída suculenta temperada no ponto ideal com temperos da casa.',
+      es: 'Masa quebrada tradicional dorada y mantecosa que se deshace en la boca, generosamente rellena de carne vacuna seleccionada, estofada lentamente a fuego suave con cebollita de verdeo, huevo picado, azeitonas y especias secretas de la casa para una jugosidad inigualable.',
+      pt: 'Massa podre artesanal dourada e amanteigada que derrete na boca, generosamente recheada com carne bovina moída de primeira, refogada lentamente com cebolinha fresca, ovo picadinho, azeitonas e temperos secretos da casa para uma suculência irresistível.',
     },
     price: 10000,
     categoryId: 'empadas',
     subCategory: 'Clásicas al Horno',
+    image: PROD_EMPADA_CARNE,
+    featured: true,
+    highlightBadge: { es: 'La Más Pedida', pt: 'Mais Pedida' },
+    options: [
+      {
+        name: { es: 'Temperatura para Servir', pt: 'Temperatura ao Servir' },
+        choices: [
+          { name: { es: 'Bien Caliente (Calentada al momento)', pt: 'Quentinha (Aquecida na hora)' } },
+          { name: { es: 'Temperatura Ambiente (Pronta para llevar)', pt: 'Temperatura Ambiente (Pronta para viagem)' } },
+        ],
+      },
+      {
+        name: { es: 'Acompañamiento o Adicional', pt: 'Acompanhamento ou Adicional' },
+        choices: [
+          { name: { es: 'Sin adicionales', pt: 'Sem adicionais' } },
+          { name: { es: 'Molho de Pimenta Artesanal da Casa (Cortesía)', pt: 'Molho de Pimenta Artesanal da Casa (Cortesia)' } },
+          { name: { es: 'Toque de Catupiry Cremoso (+2.000 ₲)', pt: 'Toque de Catupiry Cremoso (+2.000 ₲)' }, priceDelta: 2000 },
+        ],
+      },
+    ],
   },
   // Empadas Saladas Especiales
   {
     id: 'emp-sal-carne-desm',
     name: { es: 'Empada de Carne Desmechada', pt: 'Empada de Carne Desfiada' },
     description: {
-      es: 'Carne suavemente desmechada cocida lentamente en su propio jugo con especias.',
-      pt: 'Carne desfiada macia com tempero encorpado e suculência inigualável.',
+      es: 'Carne vacuna suavemente desmechada y cocida a fuego lento en su propio jugo con especias aromáticas, envuelta en masa quebrada dorada y crocante.',
+      pt: 'Carne bovina desfiada extremamente macia, cozida lentamente em seu próprio caldo com tempero encorpado e suculência inigualável em massa artesanal dourada.',
     },
     price: 13000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_CARNE_DESFIADA,
+    featured: true,
+    highlightBadge: { es: 'Especial', pt: 'Especial' },
   },
   {
     id: 'emp-sal-carne-seca-mandioca',
@@ -285,28 +323,69 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 13000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_MANDIOCA,
   },
   {
     id: 'emp-sal-carne-seca-zapallo',
     name: { es: 'Empada Carne Seca con Zapallo', pt: 'Empada Carne Seca com Abóbora' },
     description: {
-      es: 'Carne seca artesanal con puré dulce de zapallo (abóbora cabotiá).',
-      pt: 'Carne seca nobre com purê aveludado de abóbora.',
+      es: 'Combinación gourmet brasileña: carne seca desmenuzada y sazonada con cebolla morada, combinada con puré suave y aterciopelado de calabaza cabotiá en masa crocante dorada.',
+      pt: 'Clássico gourmet brasileiro: carne seca desfiada nobre refogada na manteiga com cebola roxa, combinada com purê aveludado e cremoso de abóbora cabotiá na massa podre dourada.',
     },
     price: 13000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_CARNE_SECA_ABOBORA,
+    featured: true,
+    highlightBadge: { es: 'Gourmet', pt: 'Gourmet' },
+    options: [
+      {
+        name: { es: 'Temperatura para Servir', pt: 'Temperatura ao Servir' },
+        choices: [
+          { name: { es: 'Bien Caliente (Calentada al momento)', pt: 'Quentinha (Aquecida na hora)' } },
+          { name: { es: 'Temperatura Ambiente (Pronta para llevar)', pt: 'Temperatura Ambiente (Pronta para viagem)' } },
+        ],
+      },
+      {
+        name: { es: 'Acompañamiento o Toque Especial', pt: 'Acompanhamento ou Toque Especial' },
+        choices: [
+          { name: { es: 'Tradicional (Sin adicionales)', pt: 'Tradicional (Sem adicionais)' } },
+          { name: { es: 'Molho de Pimenta Artesanal da Casa (Cortesía)', pt: 'Molho de Pimenta Artesanal da Casa (Cortesia)' } },
+          { name: { es: 'Adicional de Queijo Coalho / Catupiry (+2.000 ₲)', pt: 'Adicional de Queijo Coalho / Catupiry (+2.000 ₲)' }, priceDelta: 2000 },
+        ],
+      },
+    ],
   },
   {
     id: 'emp-sal-calabresa',
     name: { es: 'Empada de Calabresa', pt: 'Empada de Calabresa' },
     description: {
-      es: 'Salchicha calabresa ahumada salteada con cebolla y toque de orégano.',
-      pt: 'Linguiça calabresa defumada fatiada com cebola caramelizada e especiarias.',
+      es: 'Masa fina dorada rellena de auténtica calabresa ahumada en cubos y rodajas finas, salteada con cebolla caramelizada, toque de queso fundido y orégano fresco.',
+      pt: 'Massa podre tradicional fininha e dourada, recheada com linguiça calabresa defumada artesanal salteada com cebola caramelizada, toque suave de queijo derretido e orégano.',
     },
     price: 13000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_CALABRESA,
+    featured: true,
+    highlightBadge: { es: 'Ahumada', pt: 'Defumada' },
+    options: [
+      {
+        name: { es: 'Temperatura para Servir', pt: 'Temperatura ao Servir' },
+        choices: [
+          { name: { es: 'Bien Caliente (Calentada al momento)', pt: 'Quentinha (Aquecida na hora)' } },
+          { name: { es: 'Temperatura Ambiente (Pronta para llevar)', pt: 'Temperatura Ambiente (Pronta para viagem)' } },
+        ],
+      },
+      {
+        name: { es: 'Acompañamiento o Toque Especial', pt: 'Acompanhamento ou Toque Especial' },
+        choices: [
+          { name: { es: 'Tradicional (Sin adicionales)', pt: 'Tradicional (Sem adicionais)' } },
+          { name: { es: 'Molho de Pimenta Artesanal da Casa (Cortesía)', pt: 'Molho de Pimenta Artesanal da Casa (Cortesia)' } },
+          { name: { es: 'Adicional de Catupiry Cremoso (+2.000 ₲)', pt: 'Adicional de Catupiry Cremoso (+2.000 ₲)' }, priceDelta: 2000 },
+        ],
+      },
+    ],
   },
   {
     id: 'emp-sal-queso-bacon',
@@ -318,6 +397,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 13000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_QUEIJO,
   },
   {
     id: 'emp-sal-pollo',
@@ -329,6 +409,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 12000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_FRANGO,
   },
   {
     id: 'emp-sal-pollo-katupiry',
@@ -340,6 +421,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 12000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_FRANGO,
     featured: true,
     highlightBadge: { es: 'Más Vendido', pt: 'Mais Pedido' },
   },
@@ -353,6 +435,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 12000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_FRANGO,
   },
   {
     id: 'emp-sal-espinaca-queso',
@@ -364,6 +447,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 12000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_ESPINAFRE,
     isVegetarian: true,
   },
   {
@@ -376,6 +460,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 12000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_PALMITO,
     isVegetarian: true,
   },
   {
@@ -388,6 +473,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 12000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_QUEIJO,
   },
   {
     id: 'emp-sal-4quesos',
@@ -399,6 +485,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 12000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_QUEIJO,
     isVegetarian: true,
   },
   {
@@ -411,6 +498,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 15000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_COSTELA,
   },
   {
     id: 'emp-sal-camaron',
@@ -422,6 +510,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 20000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_CAMARAO,
     highlightBadge: { es: 'Gourmet', pt: 'Gourmet' },
   },
   {
@@ -434,6 +523,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 15000,
     categoryId: 'empadas',
     subCategory: 'Saladas Especiales',
+    image: PROD_EMPADA_BACALHAU,
   },
   // Empadas Integrales
   {
@@ -446,6 +536,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 13000,
     categoryId: 'empadas',
     subCategory: 'Integrales',
+    image: PROD_EMPADA_ESPINAFRE,
     isVegetarian: true,
   },
   {
@@ -458,6 +549,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 13000,
     categoryId: 'empadas',
     subCategory: 'Integrales',
+    image: PROD_EMPADA_FRANGO,
   },
   {
     id: 'emp-int-palmito',
@@ -469,6 +561,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 13000,
     categoryId: 'empadas',
     subCategory: 'Integrales',
+    image: PROD_EMPADA_PALMITO,
     isVegetarian: true,
   },
   // Empadas Dulces
@@ -775,7 +868,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 25000,
     categoryId: 'panificados',
-    image: PROD_AVOCADO_TOAST,
+    image: PROD_HUEVOS_REVUELTOS,
     featured: true,
   },
   {
@@ -954,6 +1047,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 3000,
     categoryId: 'dulces',
+    image: PROD_PASTAFROLA,
     options: [
       {
         name: { es: 'Tamaño', pt: 'Tamanho' },
@@ -973,6 +1067,7 @@ export const MENU_ITEMS: MenuItem[] = [
     },
     price: 6000,
     categoryId: 'dulces',
+    image: PROD_COOKIES,
     options: [
       {
         name: { es: 'Variedad de Cookie', pt: 'Variedade do Cookie' },

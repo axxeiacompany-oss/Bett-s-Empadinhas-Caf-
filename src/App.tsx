@@ -29,7 +29,14 @@ export default function App() {
   const [storeConfig, setStoreConfig] = useState<StoreConfig>(() => {
     try {
       const saved = localStorage.getItem('betts_store_config');
-      return saved ? JSON.parse(saved) : DEFAULT_STORE_CONFIG;
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (!parsed.whatsappPhone || parsed.whatsappPhone === '595981000000') {
+          parsed.whatsappPhone = DEFAULT_STORE_CONFIG.whatsappPhone;
+        }
+        return { ...DEFAULT_STORE_CONFIG, ...parsed };
+      }
+      return DEFAULT_STORE_CONFIG;
     } catch {
       return DEFAULT_STORE_CONFIG;
     }
